@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        html{
+            font-size: 20px;
+        }
+        header{
+            background: #262626;
+            width: 100%;
+            height: 2.25rem;
+            border-bottom:4px solid #49caac;
+        }
+        #list,#guokr,#pc{
+            height: 1.2rem;
+            float: left;
+            margin-top: 0.5rem;
+        }
+        #list{
+            width: 1.5rem;
+            background:url("img/list.jpg");
+            background-size:cover;
+            margin-left: 0.375rem;
+        }
+        #guokr{
+            width: 6.3rem;
+            background: url("img/head.jpg");
+            background-size:cover;
+            margin-left: 2.95rem;
+        }
+        #pc{
+            width: 1.45rem;
+            background:url("img/pc.jpg");
+            background-size:cover;
+            float: right;
+            margin-right: 0.375rem;
+        }
+        #user{
+            width: 100%;
+            height: 2rem;
+            background: #fafafa;
+
+        }
+        #user li{
+            width: 50%;
+            height: 1.5rem;
+            line-height: 1.5rem;
+            text-align: center;
+            float:left;
+            margin-top: 0.25rem;
+            font-size: 0.675rem;
+        }
+        .login{
+            background:url("img/1.jpg") 20% no-repeat;
+        }
+        .add{
+            background:url("img/2.jpg") 20% no-repeat;
+        }
+        .one{
+            border-right: 2px solid #e0e0e0;
+            box-sizing: border-box;
+        }
+        #newList{
+            width: 100%;
+            height: 22.125rem;
+            border-bottom:4px solid #49caac;
+        }
+        #newList a img{
+            width: 100%;
+            height: 7.8rem;
+            vertical-align:top;
+        }
+        #newList ul{
+            width: 100%;
+            height: 14.325rem;
+        }
+        #newList ul li{
+            width: calc(15.25rem - 0.5rem);
+            height: 2rem;
+            border-bottom: 2px solid #ececec;
+            margin: 0 auto;
+            line-height: 2rem;
+            text-align:left;
+            font-size: 0.7rem;
+            padding-left: 0.5rem;
+        }
+        #newList ul .last{
+            border:0;
+        }
+        .hot{
+            width: 100%;
+            border-bottom:4px solid #49caac;
+        }
+        .hot .title{
+            width: 100%;
+            height: 2rem;
+            background: #fafafa;
+            border-bottom:3px solid #e8e8e8;
+            line-height: 2rem;
+        }
+        .title a{
+            width: 1.5rem;
+            height: 1.5rem;
+            background:url("img/4.jpg") no-repeat;
+            background-size: cover;
+            float: right;
+            margin-right: 0.75rem;
+            margin-top: 0.25rem;
+        }
+        .title span{
+            float: left;
+            font-size: 0.725rem;
+            margin-left: 0.75rem;
+        }
+        .hotList{
+            width: 100%;
+            height: 2rem;
+            /*background: #ffffff;*/
+            border-bottom:#e8e8e8;
+            line-height: 2rem;
+            border-bottom:3px solid #e8e8e8;
+        }
+        .hotList li{
+            width: 3.1rem;
+            height:100%;
+            float: left;
+            font-size: 0.725rem;
+            text-align: center;
+            line-height: 2rem;
+            box-sizing: border-box;
+        }
+        .first{
+            border-bottom: 2px solid #cd3951;
+        }
+        .hotContent li{
+            width: calc(15.25rem - 0.5rem);
+            height: 2rem;
+            border-bottom: 2px solid #ececec;
+            margin: 0 auto;
+            line-height: 2rem;
+            text-align:left;
+            font-size: 0.7rem;
+            padding-left: 0.5rem;
+        }
+        .hotContent .hotOne{
+            height: 6.5rem;
+        }
+        .hotOne div img,.hotOne div p{
+            float: left;
+        }
+        .hotOne div img{
+            width: 5.2rem;
+        }
+        .hotOne div p{
+            width: 9.05rem;
+            line-height: 1.25rem;
+            padding-left: 0.5rem;
+        }
+        .hotOne h3{
+            font-size: 0.7rem;
+        }
+        .hotContent .last{
+            border:0;
+        }
+        .hotContent .back{
+            width: 100%;
+            height: 3rem;
+            background: #fafafa;
+            overflow: hidden;
+        }
+        .hotContent .back2{
+            width: 5.25rem;
+            height: 1.5rem;
+            margin:0.9rem auto;
+        }
+        .hotContent .back a{
+            width: 1.5rem;
+            height: 1.5rem;
+            background: url("img/7.jpg") no-repeat;
+            background-size: cover;
+            float:left;
+        }
+        .hotContent .back span{
+            width: 3.75rem;
+            height: 1.5rem;
+            float:left;
+            font-size: 0.7rem;
+            text-align: center;
+            line-height: 1.5rem;
+        }
+        footer{
+            width: 100%;
+            height: calc(3.75rem - 0.9rem);
+            background: #262626;
+            padding-top: 0.9rem;
+        }
+        footer a{
+            display: block;
+            width:50%;
+            height: 1.9rem;
+            color: #bcbcbc;
+            float: left;
+            box-sizing: border-box;
+            padding-left: 2rem;
+            padding-top: 0.5rem;
+        }
+        footer .pc{
+            border-right: 1px solid #666666;
+        }
+        footer .phone{
+            border-left: 1px solid #666666;
+        }
+        footer .pc i{
+            width: 1.5rem;
+            height: 1.2rem;
+            background:url("img/8.jpg");
+            background-size:cover;
+            float: left;
+        }
+        footer .pc span,footer .phone span{
+            font-size: 0.7rem;
+            float: left;
+            margin:0.3rem 0.5rem;
+        }
+        footer .phone i{
+            width: 0.7rem;
+            height: 1.2rem;
+            background:url("img/9.jpg");
+            background-size:cover;
+            float: left;
+        }
+
+    </style>
+    <script>
+        ;(function(win, doc){
+            function change(){
+                doc.documentElement.style.fontSize=20*doc.documentElement.clientWidth/320+'px';
+            }
+            change();
+
+            win.addEventListener('resize', change, false);
+        })(window, document);
+    </script>
+</head>
+<body>
+    <header>
+        <div id="list"></div>
+        <h3 id="guokr"></h3>
+        <div id="pc"></div>
+    </header>
+    <ul id="user">
+        <li class="one login">用户登录</li>
+        <li class="add">用户注册</li>
+    </ul>
+    <div id="newList">
+        <a href="javascript:;"><img src="img/3.jpg"/></a>
+        <ul>
+            <li>解读科学观点时，你应该知道的20个...</li>
+            <li>运动出点汗，更好来谈判</li>
+            <li>运动出点汗，更好来谈判</li>
+            <li>运动出点汗，更好来谈判</li>
+            <li>运动出点汗，更好来谈判</li>
+            <li>运动出点汗，更好来谈判</li>
+            <li class="last">运动出点汗，更好来谈判</li>
+        </ul>
+    </div>
+    <div class="hot">
+        <h3 class="title"><span>热门回答</span><a href="javascript:;"></a></h3>
+        <ul class="hotList">
+            <li class="first">科技</li>
+            <li>生活</li>
+            <li>人文</li>
+            <li>自然</li>
+        </ul>
+        <ul class="hotContent">
+            <li class="hotOne">
+                <h3>如果把彗星撞到地球上会怎么样？</h3>
+                <div>
+                    <img src="img/5.jpg"/>
+                    <p>撞上去的事情人类已经干过了巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴</p>
+                </div>
+            </li>
+            <li>磁场是运动的电场吗？</li>
+            <li>磁场是运动的电场吗？</li>
+            <li>磁场是运动的电场吗？</li>
+            <li class="last">磁场是运动的电场吗？</li>
+        </ul>
+
+    </div>
+
+    <div class="hot">
+        <h3 class="title"><span>小组热帖</span><a href="javascript:;"></a></h3>
+        <ul class="hotList">
+            <li class="first">科技</li>
+            <li>生活</li>
+            <li>人文</li>
+            <li>娱乐</li>
+        </ul>
+        <ul class="hotContent">
+            <li class="hotOne">
+                <h3>史密森尼国家自然史博物馆：古脊椎动物...</h3>
+                <div>
+                    <img src="img/6.jpg"/>
+                    <p>好久没有逛果壳了巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴</p>
+                </div>
+            </li>
+            <li>艾森彗星T-18小时：绝地反击！</li>
+            <li>艾森彗星T-18小时：绝地反击！</li>
+            <li>艾森彗星T-18小时：绝地反击！</li>
+            <li>艾森彗星T-18小时：绝地反击！</li>
+            <div class="back last">
+                <div class="back2">
+                    <a href="javascript:;"></a><span>回到顶部</span>
+                </div>
+
+            </div>
+        </ul>
+    </div>
+    <footer>
+        <a href="javascript:;" class="pc"><i> </i><span>PC版</span></a>
+        <a href="javascript:;" class="phone"><i> </i><span>移动版</span></a>
+    </footer>
+</body>
+</html>
